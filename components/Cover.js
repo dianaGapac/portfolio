@@ -51,7 +51,7 @@ const Cover = () => {
 					}}
 				>
 					<h3 style={{ fontSize: lg ? "32px" : md ? "28px" : "22px" }}>
-						Hi! I'm
+						Hi! I am
 					</h3>
 					<h2 style={{ fontSize: lg ? "40px" : md ? "36px" : "28px" }}>
 						Diana Rose Gapac
