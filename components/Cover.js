@@ -15,10 +15,10 @@ const Cover = () => {
 		<div>
 			<Stack direction='column' spacing={-7} marginTop='45px'>
 				<motion.div
-					initial={{ x: 800 }}
-					animate={{ x: 0 }}
+					animate={{ y: [20, 0] }}
 					transition={{ type: "tween", duration: 1.5 }}
 					style={{
+						overflowX: "hidden",
 						width: "100%",
 						height: "30px",
 						background:
@@ -179,7 +179,7 @@ const Cover = () => {
 							</Stack>
 
 							<motion.div
-								animate={{ y: 10 }}
+								animate={{ y: [-15, 0] }}
 								transition={{ type: "tween", duration: 1.5 }}
 								style={{
 									position: "absolute",
