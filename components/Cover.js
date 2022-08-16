@@ -4,17 +4,18 @@ import { motion } from "framer-motion";
 
 import Typewriter from "react-typewriter-animate";
 import "react-typewriter-animate/dist/Typewriter.css";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Cover = () => {
-	const handleDone = () => {
-		console.log(`Done after 5 loops!`);
-	};
+	const sm = useMediaQuery("(min-width:300px)");
+	const md = useMediaQuery("(min-width:600px)");
+	const lg = useMediaQuery("(min-width:900px)");
 
 	return (
 		<div>
 			<Stack direction='column' spacing={-7} marginTop='45px'>
 				<motion.div
-					initial={{ x: 1200 }}
+					initial={{ x: 800 }}
 					animate={{ x: 0 }}
 					transition={{ type: "tween", duration: 1.5 }}
 					style={{
@@ -25,7 +26,13 @@ const Cover = () => {
 					}}
 				></motion.div>
 
-				<div style={{ align: "left", marginLeft: "100px", zIndex: "99" }}>
+				<div
+					style={{
+						align: "left",
+						marginLeft: lg ? "100px" : md ? "70px" : "30px",
+						zIndex: "99",
+					}}
+				>
 					<motion.img
 						src='/images/dg-logo.svg'
 						height={"90"}
@@ -37,11 +44,27 @@ const Cover = () => {
 
 			<Stack direction={"row"} spacing={0} justifyContent='space-between'>
 				<div
-					style={{ marginLeft: "100px", display: "block", marginTop: "30px" }}
+					style={{
+						marginLeft: lg ? "100px" : md ? "70px" : "30px",
+						display: "block",
+						marginTop: "30px",
+					}}
 				>
-					<h3>Hi, I'm </h3>
-					<h2> Diana Rose Gapac</h2>
-					<h1 style={{ color: "#6858DF", marginTop: "20px" }}>
+					<h3 style={{ fontSize: lg ? "32px" : md ? "28px" : "22px" }}>
+						Hi! I'm{" "}
+					</h3>
+					<h2 style={{ fontSize: lg ? "40px" : md ? "36px" : "28px" }}>
+						Diana Rose Gapac
+					</h2>
+					<h1
+						style={{
+							maxWidth: "200px",
+							minHeight: "150px",
+							color: "#6858DF",
+							marginTop: lg ? "20px" : md ? "10px" : "6px",
+							fontSize: lg ? "64px" : md ? "56px" : "40px",
+						}}
+					>
 						<Typewriter
 							dataToRotate={[
 								[{ type: "word", text: "Web Developer" }],
@@ -88,59 +111,70 @@ const Cover = () => {
 							animate={{ scale: 1 }}
 							transition={{ duration: 1.5 }}
 							style={{
+								zIndex: "1",
 								position: "absolute",
-								left: "650px",
-								top: "300px",
+								left: lg ? "650px" : md ? "250px" : "290px",
+								top: lg ? "300px" : md ? "400px" : "190px",
 							}}
 						>
-							<img src='/images/hexagons.svg' height='120px' />
+							<img
+								src='/images/hexagons.svg'
+								height={lg ? "120px" : md ? "120px" : "80px"}
+							/>
 						</motion.div>
 					</Stack>
 				</div>
 
 				<Box>
 					<Stack direction={"row"} justifyContent='end'>
-						<div style={{ align: "right", zIndex: "99" }}>
+						<motion.div
+							// initial={{ scale: 0}}
+							// animate={{ scale: 1 }}
+							// transition={{ duration: 1.5 }}
+							style={{
+								zIndex: "99",
+								position: "absolute",
+								right: "0px",
+								top: lg ? "100px" : md ? "200px" : "300px",
+							}}
+						>
 							<img
 								src='/images/diana-gapac.png'
 								alt='picture of Diana Rose Gapac'
-								height={550}
+								height={lg ? 550 : md ? 450 : 330}
 							/>
-						</div>
+						</motion.div>
 						<Stack direction={"column"}>
 							<Stack direction='row'>
-								{/* <motion.div
-									initial={{ scale: 0 }}
-									animate={{ scale: 1 }}
-									transition={{ duration: 1.5 }}
-									style={{
-										position: "absolute",
-										right: "550px",
-										top: "300px",
-									}}
-								>
-									<img src='/images/hexagons.svg' height='120px' />
-								</motion.div> */}
-
 								<motion.div
 									initial={{ scale: 0 }}
 									animate={{ scale: 1 }}
 									transition={{ duration: 1.5 }}
 									style={{
 										position: "absolute",
-										right: "210px",
-										top: "200px",
+										right: lg ? "210px" : md ? "180px" : "110px",
+										top: lg ? "200px" : md ? "250px" : "350px",
 									}}
 								>
-									<img src='/images/round-dots.svg' height='180px' />
+									<img
+										src='/images/round-dots.svg'
+										height={lg ? "180px" : md ? "150px" : "120px"}
+									/>
 								</motion.div>
 								<motion.div
 									initial={{ scale: 0 }}
 									animate={{ scale: 1 }}
 									transition={{ duration: 1.5 }}
-									style={{ position: "absolute", right: "0px", top: "360px" }}
+									style={{
+										position: "absolute",
+										right: "0px",
+										top: lg ? "290px" : md ? "360px" : "400px",
+									}}
 								>
-									<img src='/images/half-ellipse.svg' height={150} />
+									<img
+										src='/images/half-ellipse.svg'
+										height={lg ? "150px" : md ? "150px" : "100px"}
+									/>
 								</motion.div>
 							</Stack>
 
