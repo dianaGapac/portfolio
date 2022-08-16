@@ -1,22 +1,37 @@
 import { Button } from "@mui/material";
 import { Box, Stack } from "@mui/system";
+import { motion } from "framer-motion";
+
+import Typewriter from "react-typewriter-animate";
+import "react-typewriter-animate/dist/Typewriter.css";
 
 const Cover = () => {
+	const handleDone = () => {
+		console.log(`Done after 5 loops!`);
+	};
+
 	return (
 		<div>
 			<Stack direction='column' spacing={-7} marginTop='45px'>
-				{/* <img src='/images/nav-bar.svg' alt='logo' height={"90px"} /> */}
-				<div
+				<motion.div
+					initial={{ x: 1200 }}
+					animate={{ x: 0 }}
+					transition={{ type: "tween", duration: 1.5 }}
 					style={{
 						width: "100%",
 						height: "30px",
 						background:
 							"linear-gradient(90deg, hsla(191, 88%, 81%, 1) 0%, hsla(260, 72%, 82%, 1) 40%, hsla(247, 73%, 69%, 1) 100%)",
 					}}
-				></div>
+				></motion.div>
 
-				<div style={{ align: "left", marginLeft: "100px" }}>
-					<img src='/images/dg-logo.svg' height={"90"} />
+				<div style={{ align: "left", marginLeft: "100px", zIndex: "99" }}>
+					<motion.img
+						src='/images/dg-logo.svg'
+						height={"90"}
+						animate={{ rotate: 360 }}
+						transition={{ duration: 1.5 }}
+					/>
 				</div>
 			</Stack>
 
@@ -25,35 +40,65 @@ const Cover = () => {
 					style={{ marginLeft: "100px", display: "block", marginTop: "30px" }}
 				>
 					<h3>Hi, I'm </h3>
-					<h2> DIANA ROSE GAPAC</h2>
+					<h2> Diana Rose Gapac</h2>
 					<h1 style={{ color: "#6858DF", marginTop: "20px" }}>
-						WEB <br /> DEVELOPER
+						<Typewriter
+							dataToRotate={[
+								[{ type: "word", text: "Web Developer" }],
+								[{ type: "word", text: "UI/UX Designer" }],
+								[{ type: "word", text: "Frontend Dev" }],
+								[{ type: "word", text: "Web Developer" }],
+							]}
+						/>
 					</h1>
 
-					<div style={{ marginTop: "20px" }}>
-						<Button
-							variant='contained'
-							color='inherit'
-							sx={{
-								height: "60px",
-								width: "130px",
-								borderRadius: "40px",
-								padding: "10px",
-								backgroundColor: "#20C0E6",
-								color: "white",
-								"&:hover": {
-									backgroundColor: "#2DA6EB",
-								},
+					<Stack direction='row'>
+						<motion.div
+							animate={{ y: [0, -5, -5, 0] }}
+							transition={{
+								repeat: Infinity,
+								duration: 1,
+								repeatDelay: 1,
+							}}
+							style={{ marginTop: "40px" }}
+						>
+							<Button
+								variant='contained'
+								color='inherit'
+								sx={{
+									height: "60px",
+									width: "130px",
+									borderRadius: "40px",
+									padding: "10px",
+									backgroundColor: "#20C0E6",
+									color: "white",
+									"&:hover": {
+										backgroundColor: "#2DA6EB",
+									},
+								}}
+							>
+								<text style={{ fontSize: "16px", fontWeight: "bold" }}>
+									Hire Me
+								</text>
+							</Button>
+						</motion.div>
+
+						<motion.div
+							initial={{ scale: 0 }}
+							animate={{ scale: 1 }}
+							transition={{ duration: 1.5 }}
+							style={{
+								position: "absolute",
+								left: "650px",
+								top: "300px",
 							}}
 						>
-							<text style={{ fontSize: "16px", fontWeight: "bold" }}>
-								Hire Me
-							</text>
-						</Button>
-					</div>
+							<img src='/images/hexagons.svg' height='120px' />
+						</motion.div>
+					</Stack>
 				</div>
 
-				<Box style={{ backgroundColor: "" }}>
+				<Box>
 					<Stack direction={"row"} justifyContent='end'>
 						<div style={{ align: "right", zIndex: "99" }}>
 							<img
@@ -64,17 +109,23 @@ const Cover = () => {
 						</div>
 						<Stack direction={"column"}>
 							<Stack direction='row'>
-								<div
+								{/* <motion.div
+									initial={{ scale: 0 }}
+									animate={{ scale: 1 }}
+									transition={{ duration: 1.5 }}
 									style={{
 										position: "absolute",
-										right: "480px",
-										top: "380px",
+										right: "550px",
+										top: "300px",
 									}}
 								>
 									<img src='/images/hexagons.svg' height='120px' />
-								</div>
+								</motion.div> */}
 
-								<div
+								<motion.div
+									initial={{ scale: 0 }}
+									animate={{ scale: 1 }}
+									transition={{ duration: 1.5 }}
 									style={{
 										position: "absolute",
 										right: "210px",
@@ -82,15 +133,20 @@ const Cover = () => {
 									}}
 								>
 									<img src='/images/round-dots.svg' height='180px' />
-								</div>
-								<div
+								</motion.div>
+								<motion.div
+									initial={{ scale: 0 }}
+									animate={{ scale: 1 }}
+									transition={{ duration: 1.5 }}
 									style={{ position: "absolute", right: "0px", top: "360px" }}
 								>
 									<img src='/images/half-ellipse.svg' height={150} />
-								</div>
+								</motion.div>
 							</Stack>
 
-							<div
+							<motion.div
+								animate={{ y: 10 }}
+								transition={{ type: "tween", duration: 1.5 }}
 								style={{
 									position: "absolute",
 									right: "0px",
@@ -100,19 +156,7 @@ const Cover = () => {
 									background:
 										"linear-gradient(90deg, hsla(247, 68%, 61%, 1) 0%, hsla(252, 70%, 73%, 1) 23%, hsla(191, 53%, 61%, 1) 56%, hsla(191, 92%, 85%, 1) 100%",
 								}}
-							></div>
-
-							{/* <div
-								style={{
-									position: "absolute",
-									left: "0px",
-									top: "580px",
-									width: "15%",
-									height: "30px",
-									background:
-										"linear-gradient(90deg, hsla(247, 68%, 61%, 1) 0%, hsla(252, 70%, 73%, 1) 23%, hsla(191, 53%, 61%, 1) 56%, hsla(191, 92%, 85%, 1) 100%",
-								}}
-							></div> */}
+							></motion.div>
 						</Stack>
 					</Stack>
 				</Box>
