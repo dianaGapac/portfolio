@@ -1,8 +1,7 @@
 import { Button, Grid } from "@mui/material";
 import React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { width } from "@mui/system";
-import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 
 const AboutMe = () => {
 	const sm = useMediaQuery("(min-width:300px)");
@@ -16,17 +15,23 @@ const AboutMe = () => {
 				marginLeft: "5%",
 			}}
 		>
-			<h3 style={{ fontSize: lg ? "40px" : md ? "36px" : "28px" }}>About Me</h3>
+			<h3 style={{ fontSize: lg ? "32px" : md ? "26px" : "22px" }}>About Me</h3>
 			<div style={{ maxWidth: lg ? "60%" : md ? "80%" : "92%" }}>
 				<p>
-					Hello! I am Diana, 22 yrs old. Lorem ipsum dolor sit amet,
-					consectetur adipiscing elit. Nec tellus, quisque aliquet purus tempor
-					nisl, eu enim. Pellentesque placerat quis vitae cursus fermentum
+					Hello! I am Diana, 22 yrs old. Lorem ipsum dolor sit amet, consectetur
+					adipiscing elit. Nec tellus, quisque aliquet purus tempor nisl, eu
+					enim. Pellentesque placerat quis vitae cursus fermentum
 				</p>
 			</div>
 
 			<a href='diana-gapac.pdf' download='diana-gapac.pdf'>
-				<Button variant='outlined' size='lg'>  <FileDownloadOutlinedIcon/>  <span style={{fontWeight: 'bold', marginLeft:'3px'}}>DOWNLOAD MY RESUME </span> </Button>
+				<Button variant='outlined' size='lg'>
+					{" "}
+					<FileDownloadOutlinedIcon />{" "}
+					<span style={{ fontWeight: "bold", marginLeft: "3px" }}>
+						DOWNLOAD MY RESUME{" "}
+					</span>{" "}
+				</Button>
 			</a>
 
 			<img

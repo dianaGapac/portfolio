@@ -13,11 +13,12 @@ const Cover = () => {
 
 	return (
 		<div>
-			<Stack direction='column' spacing={-7} marginTop='45px'>
+			<Stack direction='column' spacing={-7} marginTop='55px'>
 				<motion.div
-					animate={{ y: [20, 0] }}
-					transition={{ type: "tween", duration: 1.5 }}
+					animate={{ y: [0, 15] }}
+					transition={{ type: "tween", duration: 2 }}
 					style={{
+						marginTop: "-20px",
 						overflowX: "hidden",
 						width: "100%",
 						height: "30px",
@@ -59,7 +60,7 @@ const Cover = () => {
 					<h1
 						style={{
 							maxWidth: "200px",
-							minHeight: "150px",
+							minHeight: "200px",
 							color: "#6858DF",
 							marginTop: lg ? "20px" : md ? "10px" : "6px",
 							fontSize: lg ? "64px" : md ? "56px" : "40px",
@@ -69,7 +70,7 @@ const Cover = () => {
 							dataToRotate={[
 								[{ type: "word", text: "Web Developer" }],
 								[{ type: "word", text: "UI/UX Designer" }],
-								[{ type: "word", text: "Frontend Dev" }],
+								[{ type: "word", text: "Frontend Developer" }],
 								[{ type: "word", text: "Web Developer" }],
 							]}
 						/>
@@ -80,10 +81,10 @@ const Cover = () => {
 							animate={{ y: [0, -5, -5, 0] }}
 							transition={{
 								repeat: Infinity,
-								duration: 1,
+								duration: 1.5,
 								repeatDelay: 1,
 							}}
-							style={{ marginTop: "40px" }}
+							style={{ marginTop: "30px" }}
 						>
 							<Button
 								variant='contained'
@@ -130,7 +131,7 @@ const Cover = () => {
 						<motion.div
 							initial={{ scale: 0 }}
 							animate={{ scale: 1 }}
-							transition={{ duration: 1.0 }}
+							transition={{ duration: 1.5 }}
 							style={{
 								zIndex: "99",
 								position: "absolute",
@@ -179,12 +180,12 @@ const Cover = () => {
 							</Stack>
 
 							<motion.div
-								animate={{ y: [-15, 0] }}
+								animate={{ y: [0, -15], scale: 1 }}
 								transition={{ type: "tween", duration: 1.5 }}
 								style={{
 									position: "absolute",
 									right: "0px",
-									top: "580px",
+									top: "600px",
 									width: "100%",
 									height: "30px",
 									background:

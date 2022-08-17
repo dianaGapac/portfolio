@@ -5,20 +5,13 @@ import Axios from "axios";
 // import fileDownload from "js-file-download";
 import { Button, Grid } from "@mui/material";
 import AboutMe from "../components/AboutMe";
+import MyStack from "../components/MyStacks";
 
 export default function Home() {
 	const myLoader = ({ src, width, quality }) => {
 		return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
 	};
-	// const download = (e) => {
-	// 	Axios({
-	// 		url: "http://localhost:3000",
-	// 		method: "GET",
-	// 		responseType: "blob",
-	// 	}).then((res) => {
-	// 		fileDownload(res.data, "Gapac-DianaRose.pdf");
-	// 	});
-	// };
+
 	return (
 		<div>
 			<Head>
@@ -36,8 +29,12 @@ export default function Home() {
 						<Cover />
 					</Grid>
 
-					<Grid item>
-						<AboutMe xs={12} />
+					<Grid item xs={12}>
+						<AboutMe />
+					</Grid>
+
+					<Grid item xs={12}>
+						<MyStack />
 					</Grid>
 				</Stack>
 			</main>
