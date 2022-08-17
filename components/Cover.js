@@ -15,7 +15,7 @@ const Cover = () => {
 		<div>
 			<Stack direction='column' spacing={-7} marginTop='55px'>
 				<motion.div
-					animate={{ y: [0, 15] }}
+					animate={{ y: [0, 5] }}
 					transition={{ type: "tween", duration: 2 }}
 					style={{
 						marginTop: "-20px",

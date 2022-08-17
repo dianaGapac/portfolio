@@ -25,12 +25,11 @@ const AboutMe = () => {
 			</div>
 
 			<a href='diana-gapac.pdf' download='diana-gapac.pdf'>
-				<Button variant='outlined' size='lg'>
-					{" "}
-					<FileDownloadOutlinedIcon />{" "}
+				<Button variant='outlined' size='lg' style={{ marginTop: "30px" }}>
+					<FileDownloadOutlinedIcon />
 					<span style={{ fontWeight: "bold", marginLeft: "3px" }}>
-						DOWNLOAD MY RESUME{" "}
-					</span>{" "}
+						DOWNLOAD MY RESUME
+					</span>
 				</Button>
 			</a>
 
