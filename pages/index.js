@@ -3,7 +3,8 @@ import Head from "next/head";
 import Cover from "../components/Cover";
 import Axios from "axios";
 // import fileDownload from "js-file-download";
-import { Button } from "@mui/material";
+import { Button, Grid } from "@mui/material";
+import AboutMe from "../components/AboutMe";
 
 export default function Home() {
 	const myLoader = ({ src, width, quality }) => {
@@ -30,12 +31,15 @@ export default function Home() {
 			</Head>
 
 			<main>
-				<Cover />
-				<div style={{ marginTop: "150px" }}>
-					<a href='diana-gapac.pdf' download='diana-gapac.pdf'>
-						<Button> DOWNLOAD CV</Button>
-					</a>
-				</div>
+				<Stack direction='column'>
+					<Grid item xs={12}>
+						<Cover />
+					</Grid>
+
+					<Grid item>
+						<AboutMe xs={12} />
+					</Grid>
+				</Stack>
 			</main>
 		</div>
 	);

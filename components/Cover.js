@@ -113,7 +113,7 @@ const Cover = () => {
 							style={{
 								zIndex: "1",
 								position: "absolute",
-								left: lg ? "650px" : md ? "250px" : "290px",
+								left: lg ? "650px" : md ? "250px" : "260px",
 								top: lg ? "300px" : md ? "400px" : "190px",
 							}}
 						>
