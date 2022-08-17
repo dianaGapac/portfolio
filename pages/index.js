@@ -1,13 +1,23 @@
 import { Box, Stack } from "@mui/system";
 import Head from "next/head";
-import Image from "next/image";
 import Cover from "../components/Cover";
-import styles from "../styles/Home.module.css";
+import Axios from "axios";
+// import fileDownload from "js-file-download";
+import { Button } from "@mui/material";
 
 export default function Home() {
 	const myLoader = ({ src, width, quality }) => {
 		return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
 	};
+	// const download = (e) => {
+	// 	Axios({
+	// 		url: "http://localhost:3000",
+	// 		method: "GET",
+	// 		responseType: "blob",
+	// 	}).then((res) => {
+	// 		fileDownload(res.data, "Gapac-DianaRose.pdf");
+	// 	});
+	// };
 	return (
 		<div>
 			<Head>
@@ -21,6 +31,11 @@ export default function Home() {
 
 			<main>
 				<Cover />
+				<div style={{ marginTop: "150px" }}>
+					<a href='diana-gapac.pdf' download='diana-gapac.pdf'>
+						<Button> DOWNLOAD CV</Button>
+					</a>
+				</div>
 			</main>
 		</div>
 	);

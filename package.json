@@ -12,11 +12,12 @@
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@mui/material": "^5.10.0",
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
     "framer-motion": "^7.1.2",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-simple-typewriter": "^3.0.1",
     "react-typewriter-animate": "^1.2.3"
   },
   "devDependencies": {

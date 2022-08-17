@@ -128,9 +128,9 @@ const Cover = () => {
 				<Box>
 					<Stack direction={"row"} justifyContent='end'>
 						<motion.div
-							// initial={{ scale: 0}}
-							// animate={{ scale: 1 }}
-							// transition={{ duration: 1.5 }}
+							initial={{ scale: 0 }}
+							animate={{ scale: 1 }}
+							transition={{ duration: 1.0 }}
 							style={{
 								zIndex: "99",
 								position: "absolute",
