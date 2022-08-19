@@ -114,9 +114,9 @@ const MyStack = () => {
 						drag='x'
 						dragConstraints={{ right: 0, left: lg ? -100 : md ? -400 : -600 }}
 						whileInView={{
-							translateX: [0, lg ? -350 : md ? -450 : -500, 0],
+							translateX: [0, lg ? -350 : md ? -450 : sm ? -800 : -400],
 						}}
-						transition={{ duration: 20, repeat: Infinity }}
+						transition={{ duration: 8, repeat: Infinity }}
 						viewport={{ once: false, amount: 0.1 }}
 						style={{ display: "flex" }}
 					>
@@ -124,7 +124,7 @@ const MyStack = () => {
 							<motion.div key={index} style={{ marginInline: "20px" }}>
 								<img
 									src={s.img}
-									height={lg ? "70px" : sm ? "50px" : "70px"}
+									height={lg ? "70px" : sm ? "60px" : "70px"}
 									style={{ pointerEvents: "none" }}
 								/>
 							</motion.div>

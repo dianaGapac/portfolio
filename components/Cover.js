@@ -12,11 +12,13 @@ const Cover = () => {
 	const lg = useMediaQuery("(min-width:900px)");
 
 	return (
-		<div>
+		<div style={{ overflowX: "hidden" }}>
 			<Stack direction='column' spacing={-7} marginTop='55px'>
 				<motion.div
-					animate={{ y: [0, 5] }}
-					transition={{ type: "tween", duration: 2 }}
+					// animate={{ y: [0, 5] }}
+					initial={{ x: 500 }}
+					animate={{ x: 0 }}
+					transition={{ type: "tween", duration: 1.5 }}
 					style={{
 						marginTop: "-20px",
 						overflowX: "hidden",
@@ -37,14 +39,18 @@ const Cover = () => {
 					<motion.img
 						src='/images/dg-logo.svg'
 						height={"90"}
-						animate={{ rotate: 360 }}
+						initial={{ scale: 0 }}
+						animate={{ scale: 1, rotate: 360 }}
 						transition={{ duration: 1.5 }}
 					/>
 				</div>
 			</Stack>
 
 			<Stack direction={"row"} spacing={0} justifyContent='space-between'>
-				<div
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 1.5 }}
 					style={{
 						marginLeft: lg ? "10%" : md ? "70px" : "30px",
 						display: "block",
@@ -124,7 +130,7 @@ const Cover = () => {
 							/>
 						</motion.div>
 					</Stack>
-				</div>
+				</motion.div>
 
 				<Box>
 					<Stack direction={"row"} justifyContent='end'>
