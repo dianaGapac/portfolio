@@ -14,18 +14,17 @@ const MyStack = () => {
 			<div
 				style={{
 					width: "100%",
-
 					backgroundColor: "#E6F0F8",
 					marginTop: "7%",
-					borderTopRightRadius: "100px",
-					borderBottomLeftRadius: "60px",
+					borderTopRightRadius: "50px",
+					borderBottomLeftRadius: "50px",
 					overflow: "hidden",
 				}}
 			>
 				<div
 					style={{
-						marginLeft: "5%",
-						marginRight: "5%",
+						marginLeft: "10%",
+						marginRight: "10%",
 						marginTop: "70px",
 						marginBottom: "70px",
 					}}
@@ -33,7 +32,7 @@ const MyStack = () => {
 					<h3 style={{ fontSize: lg ? "32px" : md ? "26px" : "22px" }}>
 						My Current Stacks
 					</h3>
-					<p>
+					<p style={{ fontSize: lg ? "18px" : md ? "16px" : "14px" }}>
 						These are the technologies that I have used and learned from my
 						previous projects and courses.
 					</p>
@@ -59,8 +58,8 @@ const MyStack = () => {
 											opacity: 1,
 											translateX: lg
 												? index < 4 || index > 7
-													? [300, 0]
-													: [-300, 0]
+													? [400, 0]
+													: [-400, 0]
 												: md
 												? index < 3 ||
 												  (index > 5 && index < 9) ||
@@ -75,7 +74,7 @@ const MyStack = () => {
 													: [-300, 0]
 												: [0, 0],
 										}}
-										transition={{ duration: 2.5 }}
+										transition={{ duration: lg ? 2 : md ? 1.8 : 1.5 }}
 										viewport={{ once: true, amount: 0.1 }}
 									>
 										<img
@@ -93,8 +92,8 @@ const MyStack = () => {
 
 			<div
 				style={{
-					marginLeft: "10%",
-					marginRight: "10%",
+					marginLeft: "12%",
+					marginRight: "12%",
 					marginTop: "50px",
 					marginBottom: "50px",
 				}}

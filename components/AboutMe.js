@@ -12,12 +12,19 @@ const AboutMe = () => {
 		<div
 			style={{
 				marginTop: lg ? "150px" : md ? "180px" : "180px",
-				marginLeft: "5%",
+				marginLeft: "10%",
 			}}
 		>
 			<h3 style={{ fontSize: lg ? "32px" : md ? "26px" : "22px" }}>About Me</h3>
 			<div style={{ maxWidth: lg ? "60%" : md ? "80%" : "92%" }}>
-				<p>
+				<p
+					style={{
+						fontSize: lg ? "18px" : md ? "16px" : "14px",
+						textIndent: "30px",
+						textAlign: "justify",
+						textJustify: "inter-word",
+					}}
+				>
 					Hello! I am Diana, 22 yrs old. Lorem ipsum dolor sit amet, consectetur
 					adipiscing elit. Nec tellus, quisque aliquet purus tempor nisl, eu
 					enim. Pellentesque placerat quis vitae cursus fermentum

@@ -30,7 +30,7 @@ const Cover = () => {
 				<div
 					style={{
 						align: "left",
-						marginLeft: lg ? "100px" : md ? "70px" : "30px",
+						marginLeft: lg ? "10%" : md ? "70px" : "30px",
 						zIndex: "99",
 					}}
 				>
@@ -46,7 +46,7 @@ const Cover = () => {
 			<Stack direction={"row"} spacing={0} justifyContent='space-between'>
 				<div
 					style={{
-						marginLeft: lg ? "100px" : md ? "70px" : "30px",
+						marginLeft: lg ? "10%" : md ? "70px" : "30px",
 						display: "block",
 						marginTop: "30px",
 					}}

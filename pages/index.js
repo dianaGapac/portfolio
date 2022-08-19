@@ -6,6 +6,7 @@ import Axios from "axios";
 import { Button, Grid } from "@mui/material";
 import AboutMe from "../components/AboutMe";
 import MyStack from "../components/MyStacks";
+import DevProjects from "../components/DevProjects";
 
 export default function Home() {
 	const myLoader = ({ src, width, quality }) => {
@@ -18,7 +19,7 @@ export default function Home() {
 				<title>Diana Gapac</title>
 				<meta
 					name='Diana Gapac is a web developer, graduated from Technological University of the Philippines'
-					content='Diana Gapac, web developer, UI/UX designer'
+					content='Diana Gapac, Diana Rose Gapac, Diana Rose Gapac portfolio, web developer, UI/UX designer'
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
@@ -35,6 +36,10 @@ export default function Home() {
 
 					<Grid item xs={12}>
 						<MyStack />
+					</Grid>
+
+					<Grid item xs={12}>
+						<DevProjects />
 					</Grid>
 				</Stack>
 			</main>

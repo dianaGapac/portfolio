@@ -32,10 +32,8 @@ h3{
 }
 p{
   font-family: 'Roboto', sans-serif;
-  text-indent: 30px;
-  text-align: justify;
-  text-justify: inter-word;
-  font-size: 20px;
+  font-size: 18px;
+  margin-bottom: auto;
 }
 
 
