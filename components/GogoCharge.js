@@ -3,14 +3,13 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { Button, Grid, Link, Stack } from "@mui/material";
 import RoleTag from "./RoleTag";
 import { motion } from "framer-motion";
-import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 
 const GogoCharge = () => {
 	const sm = useMediaQuery("(min-width:300px)");
 	const md = useMediaQuery("(min-width:600px)");
 	const lg = useMediaQuery("(min-width:900px)");
 	return (
-		<Grid container style={{ paddingInline: "20px", overflowX: "hidden" }}>
+		<Grid container style={{ paddingInline: "20px", overflow: "hidden" }}>
 			<Grid item lg={7} sm={6} xs={12}>
 				<img
 					style={{ position: "absolute", left: "0px" }}
@@ -125,12 +124,13 @@ const GogoCharge = () => {
 			>
 				<motion.img
 					whileInView={{
+						opacity: [0, 1],
 						translateX: [150, 0],
 						translateY: [100, 0],
-						rotate: [-10, 10, 0],
+						rotate: [5, 0],
 					}}
 					transition={{ duration: 1 }}
-					viewport={{ once: true, amount: 0.1 }}
+					viewport={{ once: false, amount: 0.1 }}
 					style={{}}
 					src='/images/dev-projects/gogocharge.svg'
 					height={lg ? "500px" : md ? "350px" : "350px"}

@@ -4,14 +4,12 @@ import { Button, Grid, Stack } from "@mui/material";
 import RoleTag from "./RoleTag";
 import { motion } from "framer-motion";
 
-import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
-
 const Reserv = () => {
 	const sm = useMediaQuery("(min-width:300px)");
 	const md = useMediaQuery("(min-width:600px)");
 	const lg = useMediaQuery("(min-width:900px)");
 	return (
-		<Grid container style={{ paddingInline: "20px" }}>
+		<Grid container style={{ paddingInline: "20px", overflow: "hidden" }}>
 			<Grid
 				item
 				lg={5}
@@ -21,12 +19,13 @@ const Reserv = () => {
 			>
 				<motion.img
 					whileInView={{
+						opacity: [0, 1],
 						translateX: [-150, 0],
 						translateY: [-100, 0],
-						rotate: [-10, 10, 0],
+						rotate: [-5, 0],
 					}}
 					transition={{ duration: 1 }}
-					viewport={{ once: true, amount: 0.1 }}
+					viewport={{ once: false, amount: 0.1 }}
 					style={{}}
 					src='/images/dev-projects/reserv.svg'
 					height={lg ? "500px" : md ? "350px" : "350px"}

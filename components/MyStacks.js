@@ -112,9 +112,12 @@ const MyStack = () => {
 				>
 					<motion.div
 						drag='x'
-						dragConstraints={{ right: 0, left: lg ? -100 : md ? -400 : -600 }}
+						dragConstraints={{
+							right: 0,
+							left: lg ? -100 : md ? -500 : sm ? -750 : -1000,
+						}}
 						whileInView={{
-							translateX: [0, lg ? -350 : md ? -450 : sm ? -800 : -400],
+							x: [0, lg ? -350 : md ? -300 : sm ? -200 : -100, 0],
 						}}
 						transition={{ duration: 8, repeat: Infinity }}
 						viewport={{ once: false, amount: 0.1 }}
