@@ -7,6 +7,7 @@ import { Button, Grid } from "@mui/material";
 import AboutMe from "../components/AboutMe";
 import MyStack from "../components/MyStacks";
 import DevProjects from "../components/DevProjects";
+import DesignProjects from "../components/DesignProjects";
 
 export default function Home() {
 	const myLoader = ({ src, width, quality }) => {
@@ -40,6 +41,10 @@ export default function Home() {
 
 					<Grid item xs={12}>
 						<DevProjects />
+					</Grid>
+
+					<Grid item xs={12}>
+						<DesignProjects />
 					</Grid>
 				</Stack>
 			</main>

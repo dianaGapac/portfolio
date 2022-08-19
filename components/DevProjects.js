@@ -1,8 +1,6 @@
 import React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Grid, Stack } from "@mui/material";
-import RoleTag from "./RoleTag";
-import { motion } from "framer-motion";
+import { Stack } from "@mui/material";
 import EBaryo from "./EBaryo";
 import Sneaky from "./Sneaky";
 import GogoCharge from "./GogoCharge";
