@@ -166,7 +166,7 @@ const EBaryo = () => {
 				lg={5}
 				sm={6}
 				xs={12}
-				align={lg ? "left" : sm ? "center" : "left"}
+				align={lg ? "left" : md ? "left" : sm ? "center" : "center"}
 				style={{ order: lg ? "1" : md ? "1" : sm ? "-1" : "1" }}
 			>
 				<motion.img

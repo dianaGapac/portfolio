@@ -51,10 +51,10 @@ const DesignProjects = () => {
 							<motion.img
 								style={{ cursor: "pointer" }}
 								initial={{ scale: 0 }}
-								whileInView={{ scale: 1 }}
+								whileInView={{ scale: 1, translateX: [-50, 0] }}
 								transition={{ duration: 1 }}
 								whileHover={{ rotate: [0, 1, -1, 0] }}
-								viewport={{ once: true, amount: 0.0 }}
+								viewport={{ once: false, amount: 0.0 }}
 								whileTap={{ rotate: [0, 1, -1, 0] }}
 								src='/images/design-projects/hillary.png'
 								height={lg ? "450px" : md ? "300px" : "200px"}
@@ -65,9 +65,9 @@ const DesignProjects = () => {
 							<motion.img
 								style={{ cursor: "pointer" }}
 								initial={{ scale: 0 }}
-								whileInView={{ scale: 1 }}
+								whileInView={{ scale: 1, translateX: [-50, 0] }}
 								transition={{ duration: 1 }}
-								viewport={{ once: true, amount: 0.0 }}
+								viewport={{ once: false, amount: 0.0 }}
 								whileHover={{ rotate: [0, 1, -1, 0] }}
 								whileTap={{ rotate: [0, 1, -1, 0] }}
 								src='/images/design-projects/e-baryo.png'
@@ -81,9 +81,9 @@ const DesignProjects = () => {
 							<motion.img
 								style={{ cursor: "pointer" }}
 								initial={{ scale: 0 }}
-								whileInView={{ scale: 1 }}
+								whileInView={{ scale: 1, translateX: [50, 0] }}
 								transition={{ duration: 1 }}
-								viewport={{ once: true, amount: 0.0 }}
+								viewport={{ once: false, amount: 0.0 }}
 								whileHover={{ rotate: [0, 1, -1, 0] }}
 								whileTap={{ rotate: [0, 1, -1, 0] }}
 								src='/images/design-projects/gogocharge.png'
@@ -95,9 +95,9 @@ const DesignProjects = () => {
 							<motion.img
 								style={{ cursor: "pointer" }}
 								initial={{ scale: 0 }}
-								whileInView={{ scale: 1 }}
+								whileInView={{ scale: 1, translateX: [50, 0] }}
 								transition={{ duration: 1 }}
-								viewport={{ once: true, amount: 0.0 }}
+								viewport={{ once: false, amount: 0.0 }}
 								whileHover={{ rotate: [0, 1, -1, 0] }}
 								whileTap={{ rotate: [0, 1, -1, 0] }}
 								src='/images/design-projects/da-gianni.png'

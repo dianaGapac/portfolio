@@ -29,7 +29,6 @@ const Reserv = () => {
 						once: lg ? false : md ? false : sm ? true : false,
 						amount: 0.1,
 					}}
-					style={{}}
 					src='/images/dev-projects/reserv.png'
 					height={lg ? "500px" : md ? "350px" : "350px"}
 				/>
