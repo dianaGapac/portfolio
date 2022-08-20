@@ -12,7 +12,7 @@ const GogoCharge = () => {
 		<Grid container style={{ paddingInline: "20px", overflow: "hidden" }}>
 			<Grid item lg={7} sm={6} xs={12}>
 				<img
-					style={{ position: "absolute", left: "0px" }}
+					style={{ position: "absolute", left: "0px", zIndex: "-1" }}
 					src='/images/round-dots-half-right.svg'
 					height={lg ? "220px" : md ? "180px" : "150px"}
 				/>
@@ -129,9 +129,12 @@ const GogoCharge = () => {
 						rotate: [5, 0],
 					}}
 					transition={{ duration: 1 }}
-					viewport={{ once: lg ? false : md ? false : true, amount: 0.1 }}
+					viewport={{
+						once: lg ? false : md ? false : sm ? true : false,
+						amount: 0.1,
+					}}
 					style={{}}
-					src='/images/dev-projects/gogocharge.svg'
+					src='/images/dev-projects/gogocharge.png'
 					height={lg ? "500px" : md ? "350px" : "350px"}
 				/>
 			</Grid>

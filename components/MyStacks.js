@@ -66,12 +66,6 @@ const MyStack = () => {
 												  (index > 11 && index < 15)
 													? [300, 0]
 													: [-300, 0]
-												: sm
-												? index < 3 ||
-												  (index > 5 && index < 9) ||
-												  (index > 11 && index < 15)
-													? [300, 0]
-													: [-300, 0]
 												: [0, 0],
 										}}
 										transition={{ duration: lg ? 2 : md ? 1.8 : 1.5 }}
@@ -119,7 +113,7 @@ const MyStack = () => {
 						whileInView={{
 							x: [0, lg ? -350 : md ? -300 : sm ? -200 : -100, 0],
 						}}
-						transition={{ duration: 20, repeat: Infinity }}
+						transition={{ duration: 15, repeat: Infinity }}
 						viewport={{ once: false, amount: 0.1 }}
 						style={{ display: "flex" }}
 					>

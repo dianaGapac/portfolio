@@ -56,7 +56,7 @@ const DesignProjects = () => {
 								whileHover={{ rotate: [0, 1, -1, 0] }}
 								viewport={{ once: true, amount: 0.0 }}
 								whileTap={{ rotate: [0, 1, -1, 0] }}
-								src='/images/design-projects/hillary.svg'
+								src='/images/design-projects/hillary.png'
 								height={lg ? "450px" : md ? "300px" : "200px"}
 							/>
 						</Link>
@@ -70,7 +70,7 @@ const DesignProjects = () => {
 								viewport={{ once: true, amount: 0.0 }}
 								whileHover={{ rotate: [0, 1, -1, 0] }}
 								whileTap={{ rotate: [0, 1, -1, 0] }}
-								src='/images/design-projects/e-baryo-design.svg'
+								src='/images/design-projects/e-baryo.png'
 								height={lg ? "450px" : md ? "300px" : "200px"}
 							/>
 						</Link>
@@ -86,7 +86,7 @@ const DesignProjects = () => {
 								viewport={{ once: true, amount: 0.0 }}
 								whileHover={{ rotate: [0, 1, -1, 0] }}
 								whileTap={{ rotate: [0, 1, -1, 0] }}
-								src='/images/design-projects/gogocharge.svg'
+								src='/images/design-projects/gogocharge.png'
 								height={lg ? "450px" : md ? "300px" : "200px"}
 							/>
 						</Link>
@@ -100,7 +100,7 @@ const DesignProjects = () => {
 								viewport={{ once: true, amount: 0.0 }}
 								whileHover={{ rotate: [0, 1, -1, 0] }}
 								whileTap={{ rotate: [0, 1, -1, 0] }}
-								src='/images/design-projects/da-gianni.svg'
+								src='/images/design-projects/da-gianni.png'
 								height={lg ? "450px" : md ? "300px" : "200px"}
 							/>
 						</Link>
