@@ -41,9 +41,9 @@ const AboutMe = () => {
 			</a>
 
 			<img
-				style={{ position: "absolute", right: "0px" }}
-				src='/images/line-curve.svg'
-				height={lg ? "50px" : md ? "45px" : "35px"}
+				style={{ position: "absolute", right: "15px", marginTop: "50px" }}
+				src='/images/arrow-triangle.svg'
+				height={lg ? "25px" : md ? "20px" : "12px"}
 			/>
 		</div>
 	);

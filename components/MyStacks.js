@@ -119,7 +119,7 @@ const MyStack = () => {
 						whileInView={{
 							x: [0, lg ? -350 : md ? -300 : sm ? -200 : -100, 0],
 						}}
-						transition={{ duration: 8, repeat: Infinity }}
+						transition={{ duration: 20, repeat: Infinity }}
 						viewport={{ once: false, amount: 0.1 }}
 						style={{ display: "flex" }}
 					>

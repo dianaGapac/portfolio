@@ -25,7 +25,7 @@ const Reserv = () => {
 						rotate: [-5, 0],
 					}}
 					transition={{ duration: 1 }}
-					viewport={{ once: false, amount: 0.1 }}
+					viewport={{ once: lg ? false : md ? false : true, amount: 0.1 }}
 					style={{}}
 					src='/images/dev-projects/reserv.svg'
 					height={lg ? "500px" : md ? "350px" : "350px"}
@@ -52,7 +52,6 @@ const Reserv = () => {
 						whileInView={{
 							opacity: [0, 1],
 							translateY: [50, 0],
-							rotate: [5, -5, 0],
 						}}
 						transition={{ duration: 1 }}
 						viewport={{ once: true, amount: 0.5 }}
