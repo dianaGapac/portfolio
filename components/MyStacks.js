@@ -53,7 +53,7 @@ const MyStack = () => {
 							{stacks.map((s, index) => (
 								<Grid key={index} item lg={3} md={3} xs={4} alignSelf='center'>
 									<motion.div
-										initial={{ x: 0, y: 0, opacity: 1 }}
+										initial={{ x: 0, y: 0, opacity: 0 }}
 										whileInView={{
 											opacity: 1,
 											translateX: lg
@@ -117,7 +117,7 @@ const MyStack = () => {
 							left: lg ? -100 : md ? -500 : sm ? -750 : -1000,
 						}}
 						whileInView={{
-							x: [0, lg ? -350 : md ? -300 : sm ? -200 : -100, 0],
+							x: [0, lg ? -350 : md ? -300 : 0],
 						}}
 						transition={{ duration: 15, repeat: Infinity }}
 						viewport={{ once: false, amount: 0.1 }}

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Typewriter from "react-typewriter-animate";
 import "react-typewriter-animate/dist/Typewriter.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import ScrollIntoView from "react-scroll-into-view";
 
 const Cover = () => {
 	const sm = useMediaQuery("(min-width:300px)");
@@ -92,25 +93,27 @@ const Cover = () => {
 							}}
 							style={{ marginTop: "30px" }}
 						>
-							<Button
-								variant='contained'
-								color='inherit'
-								sx={{
-									height: "60px",
-									width: "130px",
-									borderRadius: "40px",
-									padding: "10px",
-									backgroundColor: "#20C0E6",
-									color: "white",
-									"&:hover": {
-										backgroundColor: "#2DA6EB",
-									},
-								}}
-							>
-								<text style={{ fontSize: "16px", fontWeight: "bold" }}>
-									Hire Me
-								</text>
-							</Button>
+							<ScrollIntoView selector='#footer' smooth>
+								<Button
+									variant='contained'
+									color='inherit'
+									sx={{
+										height: "60px",
+										width: "130px",
+										borderRadius: "40px",
+										padding: "10px",
+										backgroundColor: "#20C0E6",
+										color: "white",
+										"&:hover": {
+											backgroundColor: "#2DA6EB",
+										},
+									}}
+								>
+									<text style={{ fontSize: "16px", fontWeight: "bold" }}>
+										Hire Me
+									</text>
+								</Button>
+							</ScrollIntoView>
 						</motion.div>
 
 						<motion.div

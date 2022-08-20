@@ -25,9 +25,9 @@ const AboutMe = () => {
 						textJustify: "inter-word",
 					}}
 				>
-					Hello! I am Diana, 22 yrs old. Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Nec tellus, quisque aliquet purus tempor nisl, eu
-					enim. Pellentesque placerat quis vitae cursus fermentum
+					Hello! I am Diana, 22 yrs old. Fresh graduate from Technological
+					University of the Philippines.Nec tellus, quisque aliquet purus tempor
+					nisl, eu enim. Pellentesque placerat quis vitae cursus fermentum
 				</p>
 			</div>
 

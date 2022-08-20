@@ -18,16 +18,17 @@ const Reserv = () => {
 				align={lg ? "right" : sm ? "center" : "right"}
 			>
 				<motion.img
+					initial={{ opacity: 0 }}
 					whileInView={{
-						opacity: [0, 1],
+						opacity: 1,
 						translateX: [-150, 0],
 						translateY: [-100, 0],
 						rotate: [-5, 0],
 					}}
 					transition={{ duration: 1 }}
 					viewport={{
-						once: lg ? false : md ? false : sm ? true : false,
-						amount: 0.1,
+						once: true,
+						amount: 0.5,
 					}}
 					src='/images/dev-projects/reserv.png'
 					height={lg ? "500px" : md ? "350px" : "350px"}

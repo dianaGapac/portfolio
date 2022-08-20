@@ -50,8 +50,8 @@ const DesignProjects = () => {
 						<Link href='https://www.figma.com/file/bOoMuaNU16VsbEdaZcJglV/Hillary-Laurente?node-id=0%3A1'>
 							<motion.img
 								style={{ cursor: "pointer" }}
-								initial={{ scale: 0 }}
-								whileInView={{ scale: 1, translateX: [-50, 0] }}
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1, translateX: [-50, 0] }}
 								transition={{ duration: 1 }}
 								whileHover={{ rotate: [0, 1, -1, 0] }}
 								viewport={{ once: false, amount: 0.0 }}
@@ -64,8 +64,8 @@ const DesignProjects = () => {
 						<Link href='https://www.figma.com/file/25KjLm418pRAvTGQ3w2qZZ/E-Baryo?node-id=0%3A1'>
 							<motion.img
 								style={{ cursor: "pointer" }}
-								initial={{ scale: 0 }}
-								whileInView={{ scale: 1, translateX: [-50, 0] }}
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1, translateX: [-50, 0] }}
 								transition={{ duration: 1 }}
 								viewport={{ once: false, amount: 0.0 }}
 								whileHover={{ rotate: [0, 1, -1, 0] }}
@@ -80,8 +80,8 @@ const DesignProjects = () => {
 						<Link href='https://www.figma.com/file/ATWmEeEwwb8XFWVa44NU7E/GogoCharge-Design'>
 							<motion.img
 								style={{ cursor: "pointer" }}
-								initial={{ scale: 0 }}
-								whileInView={{ scale: 1, translateX: [50, 0] }}
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1, translateX: [50, 0] }}
 								transition={{ duration: 1 }}
 								viewport={{ once: false, amount: 0.0 }}
 								whileHover={{ rotate: [0, 1, -1, 0] }}
@@ -94,10 +94,10 @@ const DesignProjects = () => {
 						<Link href='https://www.figma.com/file/LHSJpLclkzOD7eZzBTv79G/DA-GIANNI-DESIGN?node-id=0%3A1'>
 							<motion.img
 								style={{ cursor: "pointer" }}
-								initial={{ scale: 0 }}
-								whileInView={{ scale: 1, translateX: [50, 0] }}
+								initial={{ opacity: 0 }}
+								whileInView={{ opacity: 1, translateX: [50, 0] }}
 								transition={{ duration: 1 }}
-								viewport={{ once: false, amount: 0.0 }}
+								viewport={{ once: false, amount: 0.2 }}
 								whileHover={{ rotate: [0, 1, -1, 0] }}
 								whileTap={{ rotate: [0, 1, -1, 0] }}
 								src='/images/design-projects/da-gianni.png'
