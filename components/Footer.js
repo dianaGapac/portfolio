@@ -31,14 +31,15 @@ const Footer = () => {
 					<Grid item lg={7} xs={12}>
 						<motion.h1
 							initial={{ opacity: 0 }}
-							whileInView={{ opacity: 1, x: [-100, 0] }}
+							whileInView={{ opacity: 1, translateX: [-100, 0] }}
 							viewport={{ once: false, amount: 0.5 }}
 							transition={{ duration: 1 }}
 							style={{
 								fontSize: lg ? "46px" : md ? "38px" : "30px",
 							}}
 						>
-							IT ALWAYS <br /> <span> SEEMS </span> <br />
+							<span>IT ALWAYS</span>
+							<br /> <span> SEEMS </span> <br />
 							<motion.span
 								style={{
 									color: "#6858DF",
@@ -71,10 +72,11 @@ const Footer = () => {
 							whileInView={{ opacity: 1, x: [100, 0] }}
 							viewport={{ once: true, amount: 0.5 }}
 							transition={{ duration: 1 }}
+							style={{ fontSize: lg ? "28px" : md ? "24px" : "20px" }}
 						>
 							CONTACTS
 						</motion.h2>
-						<Stack direction='column' style={{ marginTop: "8%" }} spacing={2}>
+						<Stack direction='column' style={{ marginTop: "5%" }} spacing={2}>
 							<Stack
 								direction='row'
 								style={{ fontSize: "18px", alignItems: "center" }}
@@ -110,7 +112,10 @@ const Footer = () => {
 										whileInView={{ opacity: 1, y: [50, 0] }}
 										viewport={{ once: true, amount: 0.5 }}
 										transition={{ duration: 1 }}
-										style={{ cursor: "pointer" }}
+										style={{
+											cursor: "pointer",
+											fontSize: lg ? "20px" : md ? "18px" : "16px",
+										}}
 									>
 										+639304150690
 									</motion.span>
@@ -152,7 +157,10 @@ const Footer = () => {
 										whileInView={{ opacity: 1, y: [50, 0] }}
 										viewport={{ once: true, amount: 0.5 }}
 										transition={{ duration: 1, delay: 0.5 }}
-										style={{ cursor: "pointer" }}
+										style={{
+											cursor: "pointer",
+											fontSize: lg ? "20px" : md ? "18px" : "16px",
+										}}
 									>
 										dianarose.gapac@tup.edu.ph
 									</motion.span>
@@ -194,7 +202,10 @@ const Footer = () => {
 										whileInView={{ opacity: [0, 1], y: [50, 0] }}
 										viewport={{ once: true, amount: 0.5 }}
 										transition={{ duration: 1, delay: 1 }}
-										style={{ cursor: "pointer" }}
+										style={{
+											cursor: "pointer",
+											fontSize: lg ? "20px" : md ? "18px" : "16px",
+										}}
 									>
 										GitHub
 									</motion.span>
@@ -236,7 +247,10 @@ const Footer = () => {
 										whileInView={{ opacity: 1, y: [50, 0] }}
 										viewport={{ once: true, amount: 0.5 }}
 										transition={{ duration: 1, delay: 1.5 }}
-										style={{ cursor: "pointer" }}
+										style={{
+											cursor: "pointer",
+											fontSize: lg ? "20px" : md ? "18px" : "16px",
+										}}
 									>
 										LinkedIn
 									</motion.span>

@@ -74,8 +74,9 @@ const MyStack = () => {
 													: [-300, 0]
 												: [0, 0],
 										}}
-										transition={{ duration: lg ? 2 : md ? 1.8 : 1.5 }}
-										viewport={{ once: true, amount: 0.1 }}
+										// transition={{ duration: lg ? 2 : md ? 1.8 : 1.5 }}
+										transition={{ duration: 2 }}
+										viewport={{ once: true, amount: 0.5 }}
 									>
 										<img
 											src={s.img}
@@ -102,8 +103,8 @@ const MyStack = () => {
 
 				<motion.div
 					style={{
-						marginLeft: "10%",
-						marginRight: "10%",
+						marginLeft: lg ? "10%" : md ? "10%" : "5%",
+						marginRight: lg ? "10%" : md ? "10%" : "5%",
 						marginTop: "50px",
 						maxWidth: "100%",
 						cursor: "grab",
@@ -114,13 +115,13 @@ const MyStack = () => {
 						drag='x'
 						dragConstraints={{
 							right: 0,
-							left: lg ? -100 : md ? -500 : sm ? -750 : -1000,
+							left: lg ? -100 : md ? -200 : sm ? -450 : -200,
 						}}
 						whileInView={{
-							x: [0, lg ? -350 : md ? -300 : 0],
+							x: [0, lg ? -350 : md ? -500 : -700, 0],
 						}}
 						transition={{ duration: 15, repeat: Infinity }}
-						viewport={{ once: false, amount: 0.1 }}
+						viewport={{ once: true, amount: 0.1 }}
 						style={{ display: "flex" }}
 					>
 						{moreStack.map((s, index) => (

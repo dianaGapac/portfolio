@@ -17,8 +17,8 @@ const Cover = () => {
 			<Stack direction='column' spacing={-7} marginTop='55px'>
 				<motion.div
 					// animate={{ y: [0, 5] }}
-					initial={{ x: 500 }}
-					animate={{ x: 0 }}
+					initial={{ x: 600, opacity: 0 }}
+					animate={{ x: 0, opacity: 1 }}
 					transition={{ type: "tween", duration: 1.5 }}
 					style={{
 						marginTop: "-20px",
@@ -39,7 +39,7 @@ const Cover = () => {
 				>
 					<motion.img
 						src='/images/dg-logo.svg'
-						height={"90"}
+						height={lg ? "90px" : md ? "90px" : "80px"}
 						initial={{ scale: 0 }}
 						animate={{ scale: 1, rotate: 360 }}
 						transition={{ duration: 1.5 }}
@@ -135,9 +135,9 @@ const Cover = () => {
 					</Stack>
 				</motion.div>
 
-				<Box>
+				<div>
 					<Stack direction={"row"} justifyContent='end'>
-						<motion.div
+						{/* <motion.div
 							initial={{ scale: 0 }}
 							animate={{ scale: 1 }}
 							transition={{ duration: 1.5 }}
@@ -153,7 +153,7 @@ const Cover = () => {
 								alt='picture of Diana Rose Gapac'
 								height={lg ? 550 : md ? 450 : 330}
 							/>
-						</motion.div>
+						</motion.div> */}
 						<Stack direction={"column"}>
 							<Stack direction='row'>
 								<motion.div
@@ -187,24 +187,25 @@ const Cover = () => {
 									/>
 								</motion.div>
 							</Stack>
-
-							<motion.div
-								animate={{ y: [0, -15], scale: 1 }}
-								transition={{ type: "tween", duration: 1.5 }}
-								style={{
-									position: "absolute",
-									right: "0px",
-									top: "600px",
-									width: "100%",
-									height: "30px",
-									background:
-										"linear-gradient(90deg, hsla(247, 68%, 61%, 1) 0%, hsla(252, 70%, 73%, 1) 23%, hsla(191, 53%, 61%, 1) 56%, hsla(191, 92%, 85%, 1) 100%",
-								}}
-							></motion.div>
 						</Stack>
 					</Stack>
-				</Box>
+				</div>
 			</Stack>
+
+			<motion.div
+				// animate={{ y: [0, 5] }}
+				initial={{ x: -600, opacity: 0 }}
+				animate={{ x: 0, opacity: 1 }}
+				transition={{ type: "tween", duration: 1.5 }}
+				style={{
+					marginTop: "40px",
+					overflowX: "hidden",
+					width: "100%",
+					height: "30px",
+					background:
+						"linear-gradient(90deg, hsla(191, 88%, 81%, 1) 0%, hsla(260, 72%, 82%, 1) 40%, hsla(247, 73%, 69%, 1) 100%)",
+				}}
+			></motion.div>
 		</div>
 	);
 };
