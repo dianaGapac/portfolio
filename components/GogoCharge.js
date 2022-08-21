@@ -131,8 +131,8 @@ const GogoCharge = () => {
 					}}
 					transition={{ duration: 1 }}
 					viewport={{
-						once: true,
-						amount: 0.5,
+						once: false,
+						amount: 0.2,
 					}}
 					src='/images/dev-projects/gogocharge.png'
 					height={lg ? "500px" : md ? "350px" : "350px"}
