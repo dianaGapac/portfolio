@@ -33,70 +33,94 @@ const ContactMe = () => {
 			>
 				Get In Touch
 			</motion.h3>
-			<p>Have a proposal or queries ? Get in touch and let's talk about it.</p>
+			<motion.p
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1, y: [50, 0] }}
+				viewport={{ once: true, amount: 0.5 }}
+				transition={{ duration: 1 }}
+			>
+				Have a proposal or queries ? Get in touch and let's talk about it.
+			</motion.p>
 
-			<Grid container>
-				<Grid item lg={5}>
-					<img
+			<Grid container sx={{ overflow: "hidden" }}>
+				<Grid item lg={5} xs={12}>
+					<motion.img
+						whileInView={{ scale: [0, 1] }}
+						viewport={{ once: true, amount: 0.0 }}
 						src='/images/ellipse-right-half.svg'
-						height='150px'
+						height={lg ? "150px" : "0px"}
 						style={{ position: "absolute", left: "0px" }}
 					/>
-					<FormControl fullWidth sx={{ m: 1 }}>
-						<TextField
-							outlined
-							label='Your Name'
-							style={{ marginTop: "15px" }}
-						/>
-						<TextField
-							outlined
-							label='Email Address'
-							style={{ marginTop: "15px" }}
-						/>
-						<TextField
-							outlined
-							label='Discuss your idea'
-							multiline
-							rows={4}
-							style={{ marginTop: "15px" }}
-						/>
+					<motion.div
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1, y: [50, 0] }}
+						viewport={{ once: true, amount: 0.5 }}
+						transition={{ duration: 1 }}
+					>
+						<FormControl fullWidth>
+							<TextField
+								outlined
+								label='Your Name'
+								style={{ marginTop: "15px" }}
+							/>
+							<TextField
+								outlined
+								label='Email Address'
+								style={{ marginTop: "15px" }}
+							/>
+							<TextField
+								outlined
+								label='Discuss your idea'
+								multiline
+								rows={4}
+								style={{ marginTop: "15px" }}
+							/>
 
-						<Button
-							variant='filled'
-							sx={{
-								marginTop: "30px",
-								backgroundColor: "#2DA6EB",
-								color: "white",
-								"&:hover": {
-									backgroundColor: "#3194CD",
-								},
-							}}
-						>
-							<span style={{ fontSize: "20px", fontWeight: "bold" }}>SEND</span>
-						</Button>
-					</FormControl>
+							<Button
+								variant='filled'
+								sx={{
+									marginTop: "30px",
+									backgroundColor: "#2DA6EB",
+									color: "white",
+									"&:hover": {
+										backgroundColor: "#3194CD",
+									},
+								}}
+							>
+								<span style={{ fontSize: "20px", fontWeight: "bold" }}>
+									SEND
+								</span>
+							</Button>
+						</FormControl>
+					</motion.div>
 				</Grid>
 
-				<Grid item lg={7}>
+				<Grid item lg={7} xs={12}>
 					<Stack direction='column' spacing={10}>
-						<img
+						<motion.img
+							whileInView={{ scale: [0, 1] }}
+							viewport={{ once: true, amount: 0.0 }}
 							src='/images/round-dots.svg'
-							height='200px'
+							height={lg ? "200px" : "0px"}
 							style={{ position: "absolute", right: "200px" }}
 						/>
 
-						<img
+						<motion.img
+							whileInView={{ scale: [0, 1] }}
+							viewport={{ once: true, amount: 0.0 }}
 							src='/images/light-blue-circle.svg'
-							height='50px'
+							height={lg ? "50px" : "0px"}
 							style={{
 								position: "absolute",
 								right: "500px",
 								marginTop: "300px",
 							}}
 						/>
-						<img
+						<motion.img
+							whileInView={{ scale: [0, 1] }}
+							viewport={{ once: true, amount: 0.0 }}
 							src='/images/lavender-circle.svg'
-							height='30px'
+							height={lg ? "30px" : "0px"}
 							style={{
 								position: "absolute",
 								right: "450px",
@@ -104,13 +128,15 @@ const ContactMe = () => {
 							}}
 						/>
 
-						<img
+						<motion.img
+							whileInView={{ scale: [0, 1] }}
+							viewport={{ once: true, amount: 0.0 }}
 							src='/images/blue-half-ellipse.svg'
-							height='150px'
+							height={lg ? "150px" : "0px"}
 							style={{
 								position: "absolute",
 								right: "0px",
-								marginTop: "200px",
+								marginTop: lg ? "200px" : "0px",
 							}}
 						/>
 					</Stack>

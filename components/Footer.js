@@ -32,7 +32,7 @@ const Footer = () => {
 						<motion.h1
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, translateX: [-100, 0] }}
-							viewport={{ once: false, amount: 0.5 }}
+							viewport={{ once: true, amount: 0.5 }}
 							transition={{ duration: 1 }}
 							style={{
 								fontSize: lg ? "46px" : md ? "38px" : "30px",

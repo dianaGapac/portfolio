@@ -33,12 +33,12 @@ const DesignProjects = () => {
 
 			<div
 				style={{
-					height: lg ? "1600px" : md ? "1200px" : "750px",
+					height: lg ? "1600px" : md ? "1000px" : "650px",
 					backgroundColor: "#E6F0F8",
 					overflow: "hidden",
 					clipPath: "polygon(0 10%, 100% 0,100% 90%, 0 100%)",
 					position: "relative",
-					paddingBlock: lg ? "20%" : md ? "30%" : "33%",
+					paddingBlock: lg ? "20%" : md ? "20%" : "22%",
 				}}
 			>
 				<Stack
@@ -108,12 +108,12 @@ const DesignProjects = () => {
 					viewport={{ once: true, amount: 0.0 }}
 					style={{
 						position: "absolute",
-						left: lg ? "190px" : md ? "70px" : "20px",
+						left: lg ? "220px" : md ? "100px" : "50px",
 						top: lg ? "300px" : md ? "240px" : "150px",
 						zIndex: "-1",
 					}}
 					src='/images/round-dots.svg'
-					height={lg ? "200px" : md ? "150px" : "100px"}
+					height={lg ? "150px" : md ? "110px" : "0px"}
 				/>
 
 				<motion.img
@@ -122,11 +122,11 @@ const DesignProjects = () => {
 					style={{
 						position: "absolute",
 						left: lg ? "10px" : md ? "5px" : "5px",
-						top: lg ? "800px" : md ? "700px" : "450px",
+						top: lg ? "800px" : md ? "550px" : "450px",
 						zIndex: "-1",
 					}}
 					src='/images/triangles-right.svg'
-					height={lg ? "35px" : md ? "28px" : "20px"}
+					height={lg ? "25px" : md ? "20px" : "0px"}
 				/>
 
 				<motion.img
@@ -134,12 +134,12 @@ const DesignProjects = () => {
 					viewport={{ once: true, amount: 0 }}
 					style={{
 						position: "absolute",
-						right: lg ? "190px" : md ? "70px" : "20px",
+						right: lg ? "220px" : md ? "100px" : "70px",
 						top: lg ? "800px" : md ? "500px" : "300px",
 						zIndex: "-1",
 					}}
 					src='/images/round-dots.svg'
-					height={lg ? "200px" : md ? "150px" : "100px"}
+					height={lg ? "150px" : md ? "110px" : "0px"}
 				/>
 
 				<motion.img
@@ -148,11 +148,11 @@ const DesignProjects = () => {
 					style={{
 						position: "absolute",
 						right: lg ? "10px" : md ? "5px" : "5px",
-						top: lg ? "1100px" : md ? "900px" : "540px",
+						top: lg ? "1100px" : md ? "750px" : "540px",
 						zIndex: "-1",
 					}}
 					src='/images/triangles-left.svg'
-					height={lg ? "35px" : md ? "28px" : "20px"}
+					height={lg ? "25px" : md ? "20px" : "0px"}
 				/>
 			</div>
 		</div>
