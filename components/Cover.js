@@ -93,7 +93,7 @@ const Cover = () => {
 							}}
 							style={{ marginTop: "30px" }}
 						>
-							<ScrollIntoView selector='#contact-form' smooth>
+							<ScrollIntoView selector='#footer' smooth>
 								<Button
 									variant='contained'
 									color='inherit'
