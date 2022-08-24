@@ -38,7 +38,6 @@ const MyStack = () => {
 					</p>
 					<div
 						style={{
-							backgroundColor: "",
 							marginInline: lg ? "15%" : "5%",
 						}}
 					>

@@ -4,12 +4,12 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import {
 	Button,
 	FormControl,
+	FormHelperText,
 	Grid,
 	IconButton,
 	TextField,
 } from "@mui/material";
 
-import SendIcon from "@mui/icons-material/Send";
 import { Stack } from "@mui/system";
 
 const ContactMe = () => {
@@ -17,10 +17,22 @@ const ContactMe = () => {
 	const md = useMediaQuery("(min-width:600px)");
 	const lg = useMediaQuery("(min-width:900px)");
 
-	const [loading, setLoading] = useState(true);
-	function handleClick() {
-		setLoading(true);
-	}
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [message, setMessage] = useState("");
+
+	const sendEmailHandler = async () => {
+		// console.log(name, email, message);
+		const response = await fetch("/api/send-email", {
+			method: "POST",
+			body: JSON.stringify({ name, email, message }),
+			headers: {
+				"Content-Type": "application/json",
+			},
+		});
+		const data = await response.json();
+		console.log(data);
+	};
 
 	return (
 		<div style={{ marginInline: "10%", marginBlock: "5%", overflow: "hidden" }}>
@@ -39,7 +51,7 @@ const ContactMe = () => {
 				viewport={{ once: true, amount: 0.5 }}
 				transition={{ duration: 1, delay: 0.5 }}
 			>
-				Have a proposal or queries ? Get in touch and let's talk about it.
+				Have a proposal or queries ? Get in touch and let&lsquo;s talk about it.
 			</motion.p>
 
 			<Grid container sx={{ overflow: "hidden" }}>
@@ -59,25 +71,38 @@ const ContactMe = () => {
 					>
 						<FormControl fullWidth>
 							<TextField
-								outlined
+								value={name}
+								variant='outlined'
 								label='Your Name'
 								style={{ marginTop: "30px" }}
+								onChange={(e) => setName(e.target.value)}
+								required
 							/>
+
 							<TextField
-								outlined
+								value={email}
+								variant='outlined'
 								label='Email Address'
+								type='email'
+								required
+								onChange={(e) => setEmail(e.target.value)}
 								style={{ marginTop: "15px" }}
 							/>
 							<TextField
-								outlined
+								value={message}
+								variant='outlined'
 								label='Discuss your idea'
 								multiline
 								rows={4}
+								onChange={(e) => setMessage(e.target.value)}
+								required
 								style={{ marginTop: "15px" }}
 							/>
 
 							<Button
+								type='submit'
 								variant='filled'
+								onClick={sendEmailHandler}
 								sx={{
 									marginTop: "30px",
 									borderRadius: "40px",

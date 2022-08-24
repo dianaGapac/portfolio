@@ -49,11 +49,11 @@ export default function Home() {
 						<DesignProjects />
 					</Grid>
 
-					{/* <Grid id='contact-form' item xs={12}>
+					<Grid id='contact-form' item xs={12}>
 						<ContactMe />
-					</Grid> */}
+					</Grid>
 
-					<Grid id='#footer' item xs={12}>
+					<Grid id='footer' item xs={12}>
 						<Footer />
 					</Grid>
 				</Stack>
