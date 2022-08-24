@@ -26,8 +26,8 @@ const ContactMe = () => {
 		<div style={{ marginInline: "10%", marginBlock: "5%", overflow: "hidden" }}>
 			<motion.h3
 				initial={{ opacity: 0 }}
-				whileInView={{ opacity: 1, x: [-100, 0] }}
-				viewport={{ once: true, amount: 0.5 }}
+				whileInView={{ opacity: 1, y: [50, 0] }}
+				viewport={{ once: true, amount: 1 }}
 				transition={{ duration: 1 }}
 				style={{ fontSize: lg ? "32px" : md ? "26px" : "22px" }}
 			>
@@ -37,7 +37,7 @@ const ContactMe = () => {
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1, y: [50, 0] }}
 				viewport={{ once: true, amount: 0.5 }}
-				transition={{ duration: 1 }}
+				transition={{ duration: 1, delay: 0.5 }}
 			>
 				Have a proposal or queries ? Get in touch and let's talk about it.
 			</motion.p>
@@ -55,13 +55,13 @@ const ContactMe = () => {
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1, y: [50, 0] }}
 						viewport={{ once: true, amount: 0.5 }}
-						transition={{ duration: 1 }}
+						transition={{ duration: 1, delay: 1 }}
 					>
 						<FormControl fullWidth>
 							<TextField
 								outlined
 								label='Your Name'
-								style={{ marginTop: "15px" }}
+								style={{ marginTop: "30px" }}
 							/>
 							<TextField
 								outlined
@@ -80,6 +80,7 @@ const ContactMe = () => {
 								variant='filled'
 								sx={{
 									marginTop: "30px",
+									borderRadius: "40px",
 									backgroundColor: "#2DA6EB",
 									color: "white",
 									"&:hover": {
