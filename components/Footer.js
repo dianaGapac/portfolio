@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, IconButton } from "@mui/material";
 
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -79,6 +79,7 @@ const Footer = () => {
 						<Stack direction='column' style={{ marginTop: "5%" }} spacing={2}>
 							<Stack
 								direction='row'
+								spacing={1}
 								style={{ fontSize: "18px", alignItems: "center" }}
 							>
 								<Link href='tel:09304150690'>
@@ -87,22 +88,16 @@ const Footer = () => {
 										whileInView={{ opacity: 1, y: [50, 0] }}
 										viewport={{ once: true, amount: 0.5 }}
 										transition={{ duration: 1 }}
-										style={{
-											backgroundColor: "rgba(255, 255, 255, 0.4)",
-											borderRadius: "100%",
-											paddingInline: "10px",
-											paddingBlock: "5px",
-											marginRight: "10px",
-											cursor: "pointer",
-										}}
 									>
-										<PhoneAndroidIcon
-											sx={{
-												"&:hover": {
+										<IconButton
+											sx={{ backgroundColor: "rgba(255, 255, 255, 0.4)" }}
+										>
+											<PhoneAndroidIcon
+												sx={{
 													color: "#7162DF",
-												},
-											}}
-										/>
+												}}
+											/>
+										</IconButton>
 									</motion.div>
 								</Link>
 
@@ -124,6 +119,7 @@ const Footer = () => {
 
 							<Stack
 								direction='row'
+								spacing={1}
 								style={{ fontSize: "18px", alignItems: "center" }}
 							>
 								<Link href='mailto:dianarose.gapac@tup.edu.ph'>
@@ -132,22 +128,16 @@ const Footer = () => {
 										whileInView={{ opacity: 1, y: [50, 0] }}
 										viewport={{ once: true, amount: 0.5 }}
 										transition={{ duration: 1, delay: 0.5 }}
-										style={{
-											backgroundColor: "rgba(255, 255, 255, 0.4)",
-											borderRadius: "100%",
-											paddingInline: "10px",
-											paddingBlock: "5px",
-											marginRight: "10px",
-											cursor: "pointer",
-										}}
 									>
-										<MailIcon
-											sx={{
-												"&:hover": {
+										<IconButton
+											sx={{ backgroundColor: "rgba(255, 255, 255, 0.4)" }}
+										>
+											<MailIcon
+												sx={{
 													color: "#7162DF",
-												},
-											}}
-										/>
+												}}
+											/>
+										</IconButton>
 									</motion.div>
 								</Link>
 
@@ -169,6 +159,7 @@ const Footer = () => {
 
 							<Stack
 								direction='row'
+								spacing={1}
 								style={{ fontSize: "18px", alignItems: "center" }}
 							>
 								<Link href='https://github.com/dianaGapac'>
@@ -177,22 +168,16 @@ const Footer = () => {
 										whileInView={{ opacity: 1, y: [50, 0] }}
 										viewport={{ once: true, amount: 0.5 }}
 										transition={{ duration: 1, delay: 1 }}
-										style={{
-											backgroundColor: "rgba(255, 255, 255, 0.4)",
-											borderRadius: "100%",
-											paddingInline: "10px",
-											paddingBlock: "5px",
-											marginRight: "10px",
-											cursor: "pointer",
-										}}
 									>
-										<GitHubIcon
-											sx={{
-												"&:hover": {
+										<IconButton
+											sx={{ backgroundColor: "rgba(255, 255, 255, 0.4)" }}
+										>
+											<GitHubIcon
+												sx={{
 													color: "#7162DF",
-												},
-											}}
-										/>
+												}}
+											/>
+										</IconButton>
 									</motion.div>
 								</Link>
 
@@ -214,6 +199,7 @@ const Footer = () => {
 
 							<Stack
 								direction='row'
+								spacing={1}
 								style={{ fontSize: "18px", alignItems: "center" }}
 							>
 								<Link href='https://www.linkedin.com/in/diana-rose-gapac-6716b4233/'>
@@ -222,22 +208,16 @@ const Footer = () => {
 										whileInView={{ opacity: 1, y: [50, 0] }}
 										viewport={{ once: true, amount: 0.5 }}
 										transition={{ duration: 1, delay: 1.5 }}
-										style={{
-											backgroundColor: "rgba(255, 255, 255, 0.4)",
-											borderRadius: "100%",
-											paddingInline: "10px",
-											paddingBlock: "5px",
-											marginRight: "10px",
-											cursor: "pointer",
-										}}
 									>
-										<LinkedInIcon
-											sx={{
-												"&:hover": {
+										<IconButton
+											sx={{ backgroundColor: "rgba(255, 255, 255, 0.4)" }}
+										>
+											<LinkedInIcon
+												sx={{
 													color: "#7162DF",
-												},
-											}}
-										/>
+												}}
+											/>
+										</IconButton>
 									</motion.div>
 								</Link>
 

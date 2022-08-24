@@ -9,6 +9,7 @@ import MyStack from "../components/MyStacks";
 import DevProjects from "../components/DevProjects";
 import DesignProjects from "../components/DesignProjects";
 import Footer from "../components/Footer";
+import ContactMe from "../components/ContactMe";
 
 export default function Home() {
 	const myLoader = ({ src, width, quality }) => {
@@ -46,6 +47,10 @@ export default function Home() {
 
 					<Grid item xs={12}>
 						<DesignProjects />
+					</Grid>
+
+					<Grid item xs={12}>
+						<ContactMe />
 					</Grid>
 
 					<Grid id='footer' item xs={12}>
