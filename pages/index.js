@@ -23,7 +23,7 @@ export default function Home() {
 					name='Diana Gapac is a web developer, graduated from Technological University of the Philippines'
 					content='Diana Gapac, Diana Rose Gapac, Diana Rose Gapac portfolio, web developer, UI/UX designer'
 				/>
-				<link rel='icon' href='/favicon.ico' />
+				<link rel='icon' href='/dg-logo.ico' />
 			</Head>
 
 			<main>
