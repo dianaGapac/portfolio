@@ -12,7 +12,7 @@ const AboutMe = () => {
 	return (
 		<div
 			style={{
-				marginTop: lg ? "100px" : md ? "70px" : "50px",
+				marginTop: lg ? "100px" : md ? "80px" : "120px",
 				marginLeft: "10%",
 			}}
 		>
