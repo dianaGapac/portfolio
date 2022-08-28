@@ -8,9 +8,9 @@ import {
 	Grid,
 	Snackbar,
 	TextField,
+	Stack,
+	CircularProgress,
 } from "@mui/material";
-
-import { Stack } from "@mui/system";
 
 const ContactMe = () => {
 	const sm = useMediaQuery("(min-width:300px)");
@@ -32,8 +32,9 @@ const ContactMe = () => {
 			},
 		});
 		const data = await response.json();
-		console.log(data);
+
 		setSubmit(true);
+		console.log(data);
 	};
 
 	const closeHandler = () => {
@@ -130,7 +131,12 @@ const ContactMe = () => {
 										},
 									}}
 								>
-									<span style={{ fontSize: "20px", fontWeight: "bold" }}>
+									<span
+										style={{
+											fontSize: "20px",
+											fontWeight: "bold",
+										}}
+									>
 										SEND
 									</span>
 								</Button>
@@ -187,7 +193,7 @@ const ContactMe = () => {
 				</Grid>
 			</Grid>
 
-			<Snackbar open={submit} autoHideDuration={5000} onClose={closeHandler}>
+			<Snackbar open={submit} autoHideDuration={3000} onClose={closeHandler}>
 				<Alert severity='success' sx={{ width: "100%" }} onClose={closeHandler}>
 					Sent Successfully! <br />
 					Thank you for reaching out, I&rsquo;ll do my best to get back to you
