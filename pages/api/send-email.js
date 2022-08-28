@@ -35,7 +35,7 @@ export default async function handler(req, res) {
 				console.error(err);
 				reject(err);
 			} else {
-				console.log("SENT" + response.info);
+				console.log("SENT");
 				resolve(info);
 			}
 		});

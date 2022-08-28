@@ -22,8 +22,12 @@ const ContactMe = () => {
 	const [message, setMessage] = useState("");
 	const [submit, setSubmit] = useState(false);
 
+	const [loading, setLoading] = useState(false);
+
 	const sendEmailHandler = async (e) => {
 		e.preventDefault();
+
+		setLoading(true);
 		const response = await fetch("/api/send-email", {
 			method: "POST",
 			body: JSON.stringify({ name, email, message }),
@@ -31,8 +35,10 @@ const ContactMe = () => {
 				"Content-Type": "application/json",
 			},
 		});
+
 		const data = await response.json();
 
+		setLoading(false);
 		setSubmit(true);
 		setName("");
 		setEmail("");
@@ -133,10 +139,18 @@ const ContactMe = () => {
 										},
 									}}
 								>
+									{loading ? (
+										<CircularProgress size='22px' color='inherit' />
+									) : submit ? (
+										""
+									) : (
+										""
+									)}
 									<span
 										style={{
 											fontSize: "20px",
 											fontWeight: "bold",
+											marginLeft: "14px",
 										}}
 									>
 										SEND
