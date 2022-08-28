@@ -7,9 +7,10 @@ const RoleTag = ({ role }) => {
 				borderRadius: "40px",
 				backgroundColor: "transparent",
 				border: "1px solid black",
-				paddingInline: "4%",
-				paddingBlock: "2%",
+				paddingInline: "3%",
+				paddingBlock: "1%",
 				marginInline: "5px",
+				fontSize: "14px",
 			}}
 		>
 			<span> {role} </span>

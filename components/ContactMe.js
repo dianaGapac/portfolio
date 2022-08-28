@@ -20,7 +20,7 @@ const ContactMe = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
-	const [submit, setSubmit] = useState("");
+	const [submit, setSubmit] = useState(false);
 
 	const sendEmailHandler = async (e) => {
 		e.preventDefault();

@@ -40,9 +40,13 @@ const AboutMe = () => {
 						textJustify: "inter-word",
 					}}
 				>
-					Hello! I am Diana, 22 yrs old. Fresh graduate from Technological
-					University of the Philippines.Nec tellus, quisque aliquet purus tempor
-					nisl, eu enim. Pellentesque placerat quis vitae cursus fermentum
+					Hello! I am Diana, Information Technology graduate from Technological
+					University of the Philippines-Manila. An aspiring web developer,
+					specialized in frontend development and UI/UX designing and I had
+					gained most of my skills and knowledge by self-studying, online
+					courses and constant practice.
+					<br /> <br />
+					Passionate, Dedicated, Teachable
 				</p>
 			</motion.div>
 

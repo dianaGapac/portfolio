@@ -137,7 +137,7 @@ const Cover = () => {
 
 				<div>
 					<Stack direction={"row"} justifyContent='end'>
-						{/* <motion.div
+						<motion.div
 							initial={{ scale: 0 }}
 							animate={{ scale: 1 }}
 							transition={{ duration: 1.5 }}
@@ -153,7 +153,7 @@ const Cover = () => {
 								alt='picture of Diana Rose Gapac'
 								height={lg ? 550 : md ? 450 : 330}
 							/>
-						</motion.div> */}
+						</motion.div>
 						<Stack direction={"column"}>
 							<Stack direction='row'>
 								<motion.div
@@ -162,13 +162,13 @@ const Cover = () => {
 									transition={{ duration: 1.5 }}
 									style={{
 										position: "absolute",
-										right: lg ? "210px" : md ? "180px" : "110px",
+										right: lg ? "210px" : md ? "140px" : "80px",
 										top: lg ? "200px" : md ? "250px" : "350px",
 									}}
 								>
 									<img
 										src='/images/round-dots.svg'
-										height={lg ? "180px" : md ? "150px" : "120px"}
+										height={lg ? "180px" : md ? "150px" : "0px"}
 									/>
 								</motion.div>
 								<motion.div
