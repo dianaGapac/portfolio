@@ -42,9 +42,9 @@ const AboutMe = () => {
 				>
 					Hello! I am Diana, Information Technology graduate from Technological
 					University of the Philippines-Manila. An aspiring web developer,
-					specialized in frontend development and UI/UX designing and I had
-					gained most of my skills and knowledge by self-studying, online
-					courses and constant practice.
+					specialized in frontend development and UI/UX designing. I had gained
+					most of my skills and knowledge by self-studying, online courses and
+					constant practice.
 					<br /> <br />
 					Passionate, Dedicated, Teachable
 				</p>
