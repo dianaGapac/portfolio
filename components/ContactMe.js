@@ -34,7 +34,9 @@ const ContactMe = () => {
 		const data = await response.json();
 
 		setSubmit(true);
-		console.log(data);
+		setName("");
+		setEmail("");
+		setMessage("");
 	};
 
 	const closeHandler = () => {

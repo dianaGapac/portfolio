@@ -1,11 +1,10 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const nodemailer = require("nodemailer");
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
 	const name = req.body.name;
 	const email = req.body.email;
 	const message = req.body.message;
-	res.status(200).json({ message: name, email });
 
 	const transporter = nodemailer.createTransport({
 		service: "hotmail",
@@ -29,12 +28,18 @@ export default function handler(req, res) {
 		 `,
 	};
 
-	transporter.sendMail(options, function (err, info) {
-		if (err) {
-			console.log(err);
-			return;
-		}
-
-		console.log("SENT" + info.response);
+	await new Promise((resolve, reject) => {
+		// send mail
+		transporter.sendMail(options, (err, info) => {
+			if (err) {
+				console.error(err);
+				reject(err);
+			} else {
+				console.log("SENT" + response.info);
+				resolve(info);
+			}
+		});
 	});
+
+	res.status(200).json({ status: "OK" });
 }
