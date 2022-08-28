@@ -5,7 +5,8 @@ export default function handler(req, res) {
 	const name = req.body.name;
 	const email = req.body.email;
 	const message = req.body.message;
-	res.status(200).json({ message: name });
+	var mailResponse;
+	res.status(200).json({ message: name, email, message });
 
 	const transporter = nodemailer.createTransport({
 		service: "hotmail",
@@ -33,5 +34,6 @@ export default function handler(req, res) {
 		}
 
 		console.log("SENT" + info.response);
+		res.status(200).json({ response: info.response });
 	});
 }

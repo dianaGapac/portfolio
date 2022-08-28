@@ -1,5 +1,6 @@
 const express = require("express");
 const next = require("next");
+// import dotenv from "dotenv";
 
 const port = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== "production";

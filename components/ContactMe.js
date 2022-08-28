@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {
+	Alert,
 	Button,
 	FormControl,
-	FormHelperText,
 	Grid,
-	IconButton,
+	Snackbar,
 	TextField,
 } from "@mui/material";
 
@@ -20,9 +20,10 @@ const ContactMe = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
+	const [submit, setSubmit] = useState("");
 
-	const sendEmailHandler = async () => {
-		// console.log(name, email, message);
+	const sendEmailHandler = async (e) => {
+		e.preventDefault();
 		const response = await fetch("/api/send-email", {
 			method: "POST",
 			body: JSON.stringify({ name, email, message }),
@@ -32,6 +33,11 @@ const ContactMe = () => {
 		});
 		const data = await response.json();
 		console.log(data);
+		setSubmit(true);
+	};
+
+	const closeHandler = () => {
+		setSubmit(false);
 	};
 
 	return (
@@ -69,55 +75,67 @@ const ContactMe = () => {
 						viewport={{ once: true, amount: 0.5 }}
 						transition={{ duration: 1, delay: 1 }}
 					>
-						<FormControl fullWidth>
-							<TextField
-								value={name}
-								variant='outlined'
-								label='Your Name'
-								style={{ marginTop: "30px" }}
-								onChange={(e) => setName(e.target.value)}
-								required
-							/>
+						<form onSubmit={sendEmailHandler}>
+							<FormControl fullWidth>
+								<TextField
+									type='text'
+									value={name}
+									variant='outlined'
+									label='Your Name'
+									style={{ marginTop: "30px" }}
+									onChange={(e) => setName(e.target.value)}
+									required
+								>
+									<input type='text' required />
+								</TextField>
 
-							<TextField
-								value={email}
-								variant='outlined'
-								label='Email Address'
-								type='email'
-								required
-								onChange={(e) => setEmail(e.target.value)}
-								style={{ marginTop: "15px" }}
-							/>
-							<TextField
-								value={message}
-								variant='outlined'
-								label='Discuss your idea'
-								multiline
-								rows={4}
-								onChange={(e) => setMessage(e.target.value)}
-								required
-								style={{ marginTop: "15px" }}
-							/>
+								<TextField
+									value={email}
+									variant='outlined'
+									label='Email Address'
+									type='email'
+									required
+									onChange={(e) => setEmail(e.target.value)}
+									style={{ marginTop: "15px" }}
+								>
+									<input type='email' required />
+								</TextField>
 
-							<Button
-								type='submit'
-								variant='filled'
-								onClick={sendEmailHandler}
-								sx={{
-									marginTop: "30px",
-									borderRadius: "40px",
-									backgroundColor: "#2DA6EB",
-									color: "white",
-									"&:hover": {
-										backgroundColor: "#3194CD",
-									},
-								}}
-							>
-								<span style={{ fontSize: "20px", fontWeight: "bold" }}>
-									SEND
-								</span>
-							</Button>
-						</FormControl>
+								<TextField
+									type='text'
+									value={message}
+									variant='outlined'
+									label='Discuss your idea'
+									multiline
+									rows={4}
+									onChange={(e) => setMessage(e.target.value)}
+									required
+									style={{ marginTop: "15px" }}
+								>
+									<input type='text' required />
+								</TextField>
+
+								<Button
+									type='submit'
+									variant='filled'
+									// onClick={sendEmailHandler}
+									// onTouchStartCapture={sendEmailHandler}
+									sx={{
+										marginTop: "30px",
+										borderRadius: "40px",
+										backgroundColor: "#2DA6EB",
+										color: "white",
+										"&:hover": {
+											backgroundColor: "#3194CD",
+										},
+									}}
+								>
+									<span style={{ fontSize: "20px", fontWeight: "bold" }}>
+										SEND
+									</span>
+								</Button>
+							</FormControl>
+						</form>
 					</motion.div>
 				</Grid>
 
@@ -168,6 +186,14 @@ const ContactMe = () => {
 					</Stack>
 				</Grid>
 			</Grid>
+
+			<Snackbar open={submit} autoHideDuration={5000} onClose={closeHandler}>
+				<Alert severity='success' sx={{ width: "100%" }} onClose={closeHandler}>
+					Sent Successfully! <br />
+					Thank you for reaching out, I&rsquo;ll do my best to get back to you
+					as soon as possible.
+				</Alert>
+			</Snackbar>
 		</div>
 	);
 };
