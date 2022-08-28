@@ -209,7 +209,7 @@ const ContactMe = () => {
 				</Grid>
 			</Grid>
 
-			<Snackbar open={submit} autoHideDuration={3000} onClose={closeHandler}>
+			<Snackbar open={submit} autoHideDuration={5000} onClose={closeHandler}>
 				<Alert severity='success' sx={{ width: "100%" }} onClose={closeHandler}>
 					Sent Successfully! <br />
 					Thank you for reaching out, I&rsquo;ll do my best to get back to you

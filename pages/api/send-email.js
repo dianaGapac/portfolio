@@ -9,16 +9,13 @@ export default async function handler(req, res) {
 	const transporter = nodemailer.createTransport({
 		service: "hotmail",
 		auth: {
-			// user: "dg.portfolio.site@outlook.com",
-			// pass: "dg.nodemailer",
-
-			user: "dianagapaportfolio.site@outlook.com",
-			pass: "#JimmyAlapag0319",
+			user: "dgportfolio.site@outlook.com",
+			pass: "dg.portfolio",
 		},
 	});
 
 	const options = {
-		from: "dianagapaportfolio.site@outlook.com",
+		from: "dgportfolio.site@outlook.com",
 		to: "dianarose.gapac@tup.edu.ph",
 		subject: "Someone wants to Get In Touch with you",
 		text: `Hi! Diana,
