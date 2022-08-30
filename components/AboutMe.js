@@ -43,7 +43,7 @@ const AboutMe = () => {
 					Hello! I am Diana, Information Technology graduate from Technological
 					University of the Philippines-Manila. An aspiring web developer,
 					specialized in frontend development and UI/UX designing. I had gained
-					most of my skills and knowledge by self-studying, online courses and
+					most of my skills and knowledge by self-study, online courses and
 					constant practice.
 					<br /> <br />
 					Passionate, Dedicated, Teachable
@@ -55,8 +55,8 @@ const AboutMe = () => {
 				whileInView={{ opacity: 1, y: [50, 0] }}
 				viewport={{ once: true, amount: 0.5 }}
 				transition={{ duration: 1, delay: 1 }}
-				href='diana-gapac.pdf'
-				download='diana-gapac.pdf'
+				href='Gapac-Diana-Resume.pdf'
+				download='Gapac-Diana-Resume.pdf'
 			>
 				<Button variant='outlined' size='lg' style={{ marginTop: "30px" }}>
 					<FileDownloadOutlinedIcon />

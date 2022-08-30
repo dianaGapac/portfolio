@@ -66,7 +66,7 @@ const ContactMe = () => {
 				viewport={{ once: true, amount: 0.5 }}
 				transition={{ duration: 1, delay: 0.5 }}
 			>
-				Have a proposal or queries ? Get in touch and let&lsquo;s talk about it.
+				Have a proposal or query? Get in touch and let&lsquo;s talk about it.
 			</motion.p>
 
 			<Grid container sx={{ overflow: "hidden" }}>
