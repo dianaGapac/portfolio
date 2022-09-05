@@ -79,7 +79,7 @@ const Reserv = () => {
 						viewport={{ once: true, amount: 0.5 }}
 						style={{ color: "#606060" }}
 					>
-						(Multiplatform E-Commerce Web Application)
+						(Multiplatform E-Commerce Application)
 					</motion.p>
 
 					<motion.div

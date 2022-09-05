@@ -75,7 +75,7 @@ const DesignProjects = () => {
 					</Stack>
 
 					<Stack direction='column' spacing={2} style={{ marginTop: "10%" }}>
-						<Link href='https://www.figma.com/file/ATWmEeEwwb8XFWVa44NU7E/GogoCharge-Design'>
+						<Link href='https://www.figma.com/file/ATWmEeEwwb8XFWVa44NU7E/GogoCharge-Design?node-id=114%3A2179'>
 							<motion.img
 								style={{ cursor: "pointer" }}
 								whileInView={{ translateX: [50, 0] }}
