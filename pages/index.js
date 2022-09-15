@@ -20,94 +20,83 @@ export default function Home() {
 		<div>
 			<Head>
 				<title>Diana Gapac</title>
-				<meta data-n-head='1' charset='utf-8'></meta>
+				<meta data-n-head='1' charset='utf-8' />
 				<meta
 					data-n-head='1'
 					data-hid='description'
 					name='description'
 					content='UI/UX Designer, Fullstack Web developer from Manila, Philippines, Diana Gapac, Diana Rose Gapac, Diana Rose Gapac portfolio, web developer, UI/UX designer'
-				></meta>
+				/>
 				<meta
 					data-n-head='1'
 					data-hid='apple-mobile-web-app-capable'
 					name='apple-mobile-web-app-capable'
 					content='yes'
-				>
-					{" "}
-				</meta>
+				/>
+
 				<meta
 					data-n-head='1'
 					data-hid='mobile-web-app-capable'
 					name='mobile-web-app-capable'
 					content='yes'
-				>
-					{" "}
-				</meta>
+				/>
+
 				<meta
 					data-n-head='1'
 					data-hid='og:title'
 					property='og:title'
 					content='Diana Gapac | Portfolio'
-				>
-					{" "}
-				</meta>
+				/>
+
 				<meta
 					data-n-head='1'
 					data-hid='og:type'
 					property='og:type'
 					content='portfolio'
-				>
-					{" "}
-				</meta>
+				/>
+
 				<meta
 					data-n-head='1'
 					data-hid='og:url'
 					property='og:url'
 					content='https://diana-gapac.ml/'
-				>
-					{" "}
-				</meta>
+				/>
+
 				<meta
 					data-n-head='1'
 					data-hid='og:image'
 					property='og:image'
 					content='/seo-cover.jpg'
-				>
-					{" "}
-				</meta>
+				/>
+
 				<meta
 					data-n-head='1'
 					data-hid='og:description'
 					property='og:description'
 					content='UI/UX Designer, Fullstack Web developer from Manila, Philippines, Diana Rose Gapac'
-				>
-					{" "}
-				</meta>
+				/>
+
 				<meta
 					data-n-head='1'
 					data-hid='og:site_name'
 					property='og:site_name'
 					content='Diana Gapac| Portfolio'
-				>
-					{" "}
-				</meta>
+				/>
 
 				<meta
 					data-n-head='1'
 					data-hid='twitter:card'
 					name='twitter:card'
 					content='summary_large_image'
-				>
-					{" "}
-				</meta>
+				/>
+
 				<meta
 					data-n-head='1'
 					data-hid='twitter:title'
 					name='twitter:title'
 					content='Diana Gapac | Portfolio'
-				>
-					{" "}
-				</meta>
+				/>
+
 				{/* <meta data-n-head="1" data-hid="twitter:site" name="twitter:site" content="@_christop_"> </meta>
 
 				<meta data-n-head="1" data-hid="twitter:site" name="twitter:site" content="@_christop_"> </meta>
@@ -118,23 +107,21 @@ export default function Home() {
 					data-hid='itemprop:name'
 					itemprop='name'
 					content='Diana Gapac| Portfolio'
-				>
-					{" "}
-				</meta>
+				/>
+
 				<meta
 					data-n-head='1'
 					data-hid='itemprop:image'
 					itemprop='image'
 					content='/topzdev-logo.svg'
-				>
-					{" "}
-				</meta>
+				/>
+
 				<meta
 					data-n-head='1'
 					data-hid='apple-mobile-web-app-title'
 					name='apple-mobile-web-app-title'
 					content='Diana Gapac | Portfolio'
-				></meta>
+				/>
 
 				{/* <meta
 					description='Diana Gapac is a web developer, graduated from Technological University of the Philippines'
