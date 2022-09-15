@@ -104,15 +104,15 @@ export default function Home() {
 				<meta data-n-head="1" data-hid="twitter:creator" name="twitter:creator" content="@_christop_"> </meta> */}
 				<meta
 					data-n-head='1'
-					data-hid='itemprop:name'
-					itemprop='name'
+					data-hid='itemProp:name'
+					itemProp='name'
 					content='Diana Gapac| Portfolio'
 				/>
 
 				<meta
 					data-n-head='1'
-					data-hid='itemprop:image'
-					itemprop='image'
+					data-hid='itemProp:image'
+					itemProp='image'
 					content='/topzdev-logo.svg'
 				/>
 
