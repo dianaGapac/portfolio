@@ -137,19 +137,7 @@ const Cover = () => {
 
 				<div>
 					<Stack direction={"row"} justifyContent='end'>
-						<motion.div
-							initial={{ scale: 0 }}
-							animate={{ scale: 1 }}
-							transition={{ duration: 1.5 }}
-							style={{
-								zIndex: "99",
-								position: "absolute",
-								right: "0px",
-								top: lg ? "100px" : md ? "200px" : "300px",
-							}}
-						>
-							
-						</motion.div>
+			
 						<Stack direction={"column"}>
 							<Stack direction='row'>
 								<motion.div
