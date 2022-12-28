@@ -148,11 +148,11 @@ const Cover = () => {
 								top: lg ? "100px" : md ? "200px" : "300px",
 							}}
 						>
-							<img
-								src='/images/diana-gapac.png'
-								alt='picture of Diana Rose Gapac'
-								height={lg ? 550 : md ? 450 : 330}
-							/>
+// 							<img
+// 								src='/images/diana-gapac.png'
+// 								alt='picture of Diana Rose Gapac'
+// 								height={lg ? 550 : md ? 450 : 330}
+// 							/>
 						</motion.div>
 						<Stack direction={"column"}>
 							<Stack direction='row'>
